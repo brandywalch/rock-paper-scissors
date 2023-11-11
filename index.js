@@ -17,4 +17,37 @@ function getComputerChoice(){
 
 // console.log(getComputerChoice())
 
+// return a string that declares the winner of the round like so: "You Lose! Paper beats Rock"
+// Use if statements to delcare winner
 
+let playerSelection ="Scissors"
+const computerSelection = getComputerChoice()
+
+function playRound(playerSelection, computerSelection) {
+    
+    if (playerSelection === "Rock" && computerSelection === "Paper") {
+        return "You Lose! Paper Beats Rock!"
+    } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
+        return "You Win! Rock Beats Scissors"
+    } else if (playerSelection === "Rock" && computerSelection === "Rock") {
+        return "Its a Tie!"
+
+    } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+        return "You Lose! Scissors Beats Paper"
+    } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+        return "You Win! Paper Beats Rock"
+    } else if (playerSelection === "Paper" && computerSelection === "Paper") {
+        return "It's a Tie!"
+    } 
+
+    else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+        return "You Lose! Rock Beats Scissors"
+    }  else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+        return "You Win! Scissors Beats Paper"
+    }  else if (playerSelection === "Scissors" && computerSelection === "Scissors") {
+        return "It's a Tie!"
+    } 
+}
+
+
+console.log(playRound(playerSelection, computerSelection))
